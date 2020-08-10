@@ -8,7 +8,7 @@ body {
   background: blue;
 }
 
-.create-task {
+.todolist-container__create-task {
   width: 100%;
   height: 100px;
   background: #00bcd4;
@@ -18,19 +18,19 @@ body {
   justify-content: center;
 }
 
-#form-input {
+#create-task__form-input {
   display: flex;
 }
 
-#task-input {
+#create-task__task-input {
 
 }
 
-#button-submit-input {
+#create-task__button-submit-input {
 
 }
 
-.display-task {
+.todolist-container__display-task {
   width: 100%;
   height: 300px;
   background: #b2ebf2;
@@ -43,7 +43,7 @@ body {
   width: 80%;
   height: 100px;
   margin-left: 10px;
-  background: #ff5722;
+  background: #dd2c00;
   border-radius: 1em;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   display: flex;
@@ -51,27 +51,27 @@ body {
   justify-content: center;
 }
 
-.todo-text {
+.todo-template__text {
   background: white;
 }
 
-.todo-edit {
+.todo-template__edit {
 
 }
 
-#button-todo-edit {
+#button-todo-template__edit {
 
 }
 
-.todo-delete {
-  
-}
-
-#button-todo-delete {
+.todo-template_delete {
 
 }
 
-.edit-task {
+#button-todo-template__delete {
+
+}
+
+.todolist-container__edit-task {
   width: 100%;
   height: 100px;
   background: #ff5722;
@@ -81,14 +81,14 @@ body {
   justify-content: center;
 }
 
-#form-edit {
+#edit-task__form-edit {
   display: flex;
 }
 
-#task-edit {
+#edit-task__task-edit {
 
 }
 
-#button-submit-edit {
+#edit-task__button-submit-edit {
 
 }
