@@ -2,34 +2,93 @@ body {
 
 }
 
-.todolist {
+.todolist-container {
   width: 800px;
   height: auto;
   background: blue;
 }
 
-.create_task {
+.create-task {
   width: 100%;
   height: 100px;
   background: #00bcd4;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.create_task form {
+#form-input {
+  display: flex;
+}
+
+#task-input {
+
+}
+
+#button-submit-input {
+
+}
+
+.display-task {
+  width: 100%;
+  height: 300px;
+  background: #b2ebf2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.todo-template {
+  width: 80%;
+  height: 100px;
+  margin-left: 10px;
+  background: #ff5722;
+  border-radius: 1em;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.display_task {
-  width: 100%;
-  height: 300px;
-  background: #b2ebf2;
+.todo-text {
+  background: white;
 }
 
-.edit_task {
+.todo-edit {
+
+}
+
+#button-todo-edit {
+
+}
+
+.todo-delete {
+  
+}
+
+#button-todo-delete {
+
+}
+
+.edit-task {
   width: 100%;
   height: 100px;
   background: #ff5722;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#form-edit {
+  display: flex;
+}
+
+#task-edit {
+
+}
+
+#button-submit-edit {
+
 }
