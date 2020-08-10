@@ -4,6 +4,9 @@ function addItem(){
     let todoTemplate = document.querySelector('.todo-template');
     let newTask = todoTemplate.cloneNode(true);
     todoTemplate.after(newTask);
+    let input = document.getElementById("create-task__task-input").value;
+    document.getElementById("create-task__task-input").value = '';
+    
 }
 
 
