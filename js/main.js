@@ -3,30 +3,36 @@ document.querySelector('#create-task__button-submit-input').addEventListener('cl
 let counter = 0;
 
 function addItem(){
-    // Copying the Template
+
+    // Copy the Template
     let todoTemplate = document.querySelector('.todo-template');
     let newTask = todoTemplate.cloneNode(true);
 
-    // Assigning a new ID to the To Do
+    // Assign a new ID to the To Do
     counter++;
-    newTask.id = "todo"+ counter;
+    let todoID = counter;
+    newTask.id = "todo"+ todoID;
     todoTemplate.after(newTask);
 
-    //Parsing the Content of the Input into the To Do, then delete the Input
+    //Parse the Content of the Input into the To Do, then delete the Input
     let todoInput = document.getElementById("create-task__task-input").value;
     newTask.querySelectorAll(":scope > .todo-template__text")[0].textContent = todoInput;
     document.getElementById("create-task__task-input").value = '';
+
+    // Add Event Listeners for the Buttons
+    newTask.querySelectorAll(":scope > button")[0].addEventListener("click", editItem.bind(null, todoID));
+    newTask.querySelectorAll(":scope > button")[1].addEventListener("click", deleteItem.bind(null, todoID));
 }
 
 
-function editItem(){
 
-
+function editItem(toDoID){
+    console.log(`edit ${toDoID}`);
 }
 
 
 
-function deleteItem(){
-
+function deleteItem(toDoID){
+    console.log(`delete ${toDoID}`);
 
 }
