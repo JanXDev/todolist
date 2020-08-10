@@ -9,20 +9,40 @@
   </head>
 
   <body>
-    <div class="todolist">
+    <div class="todolist-container">
 
-      <div class="create_task">
+      <div class="create-task">
 
-        <form id="form_input">
-          <input id="task_input" type="text" name="task_input" />
-          <button type="submit" id="submit">Submit</button>
+        <form id="form-input">
+          <input id="task-input" type="text" name="task-input" />
+          <button type="submit" id="button-submit-input">Submit new task</button>
         </form>
 
       </div>
 
-      <div class="display_task">Display, edit and delete the tasks</div>
+      <div class="display-task">
 
-      <div class="edit_task">Edit a task</div>
+        <div class="todo-template">
+
+          <div class="todo-text">Here comes the text field with the task.</div>
+          <div class="todo-edit">
+            <button type="submit" id="button-todo-edit">Edit</button>
+          </div>
+          <div class="todo-delete">
+            <button type="submit" id="button-todo-delete">Delete</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="edit-task">
+
+        <form id="form-edit">
+          <input id="task-edit" type="text" name="task-edit" />
+          <button type="submit" id="button-submit-edit">Submit changes</button>
+        </form>
+      </div>
 
     </div>
     <script src="src/index.js"></script>
