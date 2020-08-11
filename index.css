@@ -1,5 +1,4 @@
 body {
-
 }
 
 .todolist-container {
@@ -23,11 +22,9 @@ body {
 }
 
 #create-task__task-input {
-
 }
 
 #create-task__button-submit-input {
-
 }
 
 .todolist-container__display-task {
@@ -58,19 +55,15 @@ body {
 }
 
 .todo-template__edit {
-
 }
 
 #button-todo-template__edit {
-
 }
 
 .todo-template_delete {
-
 }
 
 #button-todo-template__delete {
-
 }
 
 .todolist-container__edit-task {
@@ -88,9 +81,7 @@ body {
 }
 
 #edit-task__task-edit {
-
 }
 
 #edit-task__button-submit-edit {
-
 }
