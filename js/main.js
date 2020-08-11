@@ -1,8 +1,6 @@
-document.querySelector('#create-task__button-submit-input').addEventListener('click', addItem);
-
 let counter = 0;
 
-function addItem(){
+const addItem = () => {
 
     // Copy the Template
     let todoTemplate = document.querySelector('.todo-template');
@@ -24,11 +22,15 @@ function addItem(){
     newTask.querySelectorAll(":scope > button")[1].addEventListener("click", deleteItem.bind(null, todoID));
 }
 
-function editItem(toDoID){
+const editItem = (toDoID) => {
     console.log(`edit ${toDoID}`);
 }
 
-function deleteItem(toDoID){
+const deleteItem = (toDoID) => {
     console.log(`delete ${toDoID}`);
-
 }
+
+// Add Task Button
+document.querySelector('#create-task__button-submit-input').addEventListener('click', addItem);
+
+
