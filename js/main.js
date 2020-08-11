@@ -30,7 +30,7 @@ const deleteItem = (toDoID) => {
     console.log(`delete ${toDoID}`);
 }
 
-// Add Task Button
+// "To Do" Button Event Listener
 document.querySelector('#create-task__button-submit-input').addEventListener('click', addItem);
 
 
