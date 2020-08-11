@@ -16,21 +16,17 @@ function addItem(){
 
     //Parse the Content of the Input into the To Do, then delete the Input
     let todoInput = document.getElementById("create-task__task-input").value;
-    newTask.querySelectorAll(":scope > .todo-template__text")[0].textContent = todoInput;
-    document.getElementById("create-task__task-input").value = '';
+    newTask.querySelectorAll(".todo-template__text")[0].textContent = todoInput;
+    document.querySelector("#create-task__task-input").value = '';
 
     // Add Event Listeners for the Buttons
     newTask.querySelectorAll(":scope > button")[0].addEventListener("click", editItem.bind(null, todoID));
     newTask.querySelectorAll(":scope > button")[1].addEventListener("click", deleteItem.bind(null, todoID));
 }
 
-
-
 function editItem(toDoID){
     console.log(`edit ${toDoID}`);
 }
-
-
 
 function deleteItem(toDoID){
     console.log(`delete ${toDoID}`);
