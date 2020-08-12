@@ -1,9 +1,9 @@
 //Global Counter for "To Do" IDs
 let counter = 0;
-let inputContainer = document.getElementsByClassName("todolist-container__edit-task")[0];
 
 // Make the template and the Edit section invisible by default
 document.getElementsByClassName("todo-template")[0].style.display = "none";
+// Bottom section can be deleted. Editing now works in the task itself.
 document.getElementsByClassName(
   "todolist-container__edit-task"
 )[0].style.display = "none";
@@ -54,22 +54,10 @@ const editItem = (toDoID) => {
     taskContent.style.display = 'block';
     taskDiv.querySelectorAll("input")[0].remove();
   }
-
-  // buttonFunction.textContent = buttonFunction.textContent === "Edit" ? "Save" : "Edit";
-
-
 };
 
 const deleteItem = (toDoID) => {
   document.querySelector("#todo" + toDoID).remove();
-};
-
-const submitChanges = () => {
-  inputContainer.style.display = "none";
-  let inputField = document.getElementById("edit-task__task-edit").value;
-  let taskContainer = document.querySelector("#todo" + toDoID);
-  let textContainer = taskContainer.querySelector(".todo-template__text");
-  textContainer.textContent = inputField;
 };
 
 // "To Do" Button Event Listener
@@ -77,12 +65,7 @@ document
   .querySelector("#create-task__button-submit-input")
   .addEventListener("click", addItem);
 
-// "Submit Changes" Button Event Listener
-document
-  .querySelector("#edit-task__button-submit-edit")
-  .addEventListener("click", submitChanges);
-
-// Date displayed
+// Date Display
 const dateElement = document.querySelector("#date");
 let today = ([month, date, year] = new Date().toLocaleDateString().split("/"));
 dateElement.innerHTML = today;
