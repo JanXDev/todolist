@@ -2,7 +2,7 @@ body {
 }
 
 .todolist-container {
-  width: 800px;
+  max-width: 600px;
   height: auto;
   background: blue;
 }
@@ -10,11 +10,16 @@ body {
 .todolist-container__create-task {
   width: 100%;
   height: 100px;
-  background: #00bcd4;
+  /*background: #00bcd4;*/
+  background-image: url("https://cdn3.vectorstock.com/i/1000x1000/75/82/seamless-cartoon-nature-landscape-with-2d-game-vector-9827582.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 #create-task__form-input {
@@ -27,10 +32,19 @@ body {
 #create-task__button-submit-input {
 }
 
+#date {
+  color: white;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-family: monospace;
+  font-size: 1.1em;
+}
+
 .todolist-container__display-task {
   width: 100%;
   min-height: 300px;
-  background: #b2ebf2;
+  background: #2a9d8f;
 
   display: flex;
   flex-direction: column;
@@ -38,12 +52,11 @@ body {
 }
 
 .todo-template {
-  width: 80%;
-  height: 100px;
-  margin-left: 10px;
-  background: #dd2c00;
+  width: 90%;
+  min-height: 70px;
+  background: #e9c46a;
   margin: 5px;
-  border-radius: 1em;
+  border-radius: 0.3em;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
@@ -52,6 +65,8 @@ body {
 
 .todo-template__text {
   background: white;
+  border-radius: 0.3em;
+  padding: 10px;
 }
 
 .todo-template__edit {
@@ -69,7 +84,7 @@ body {
 .todolist-container__edit-task {
   width: 100%;
   height: 100px;
-  background: #ff5722;
+  background: #264653;
   display: flex;
   flex-direction: row;
   align-items: center;
