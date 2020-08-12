@@ -40,10 +40,13 @@ const editItem = (toDoID) => {
   let taskContent = taskDiv.querySelectorAll(".todo-template__text")[0]
   let buttonFunction = taskDiv.querySelectorAll("button")[0];
 
+  // This checks which functionality the Button should perform
   if (buttonFunction.textContent === "Edit") {
     buttonFunction.textContent = "Save";
     taskContent.style.display = 'none';
     let inputField = document.createElement("input");
+    inputField.value = taskContent.textContent;
+    console.log(taskContent);
     taskDiv.prepend(inputField);
   } else {
     buttonFunction.textContent = "Edit";
