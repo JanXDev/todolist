@@ -1,5 +1,6 @@
 //Global Counter for "To Do" IDs
 let counter = 0;
+let inputContainer = document.getElementsByClassName("todolist-container__edit-task")[0];
 
 // Make the template and the Edit section invisible by default
 document.getElementsByClassName("todo-template")[0].style.display = "none";
@@ -35,19 +36,25 @@ const addItem = () => {
 };
 
 const editItem = (toDoID) => {
-  document.getElementsByClassName(
-    "todolist-container__edit-task"
-  )[0].style.display = "flex";
-  document
-    .querySelector("#todo" + toDoID)
-    .querySelector(
-      ".todo-template__text"
-    ).textContent = document.getElementById("edit-task__task-edit").value;
-  /*
-    let inputField = document.getElementById("edit-task__task-edit").value;
-    let taskContainer = document.querySelector("#todo" + toDoID);
-    let textContainer = taskContainer.querySelector(".todo-template__text");
-    textContainer.textContent = inputField; */
+  let taskDiv = document.querySelector("#todo" + toDoID);
+  let taskContent = taskDiv.querySelectorAll(".todo-template__text")[0]
+  let buttonFunction = taskDiv.querySelectorAll("button")[0];
+
+  if (buttonFunction.textContent === "Edit") {
+    buttonFunction.textContent = "Save";
+    taskContent.style.display = 'none';
+    let inputField = document.createElement("input");
+    taskDiv.prepend(inputField);
+  } else {
+    buttonFunction.textContent = "Edit";
+    taskContent.textContent = taskDiv.querySelectorAll("input")[0].value;
+    taskContent.style.display = 'block';
+    taskDiv.querySelectorAll("input")[0].remove();
+  }
+
+  // buttonFunction.textContent = buttonFunction.textContent === "Edit" ? "Save" : "Edit";
+
+
 };
 
 const deleteItem = (toDoID) => {
@@ -55,9 +62,11 @@ const deleteItem = (toDoID) => {
 };
 
 const submitChanges = () => {
-  document.getElementsByClassName(
-    "todolist-container__edit-task"
-  )[0].style.display = "none";
+  inputContainer.style.display = "none";
+  let inputField = document.getElementById("edit-task__task-edit").value;
+  let taskContainer = document.querySelector("#todo" + toDoID);
+  let textContainer = taskContainer.querySelector(".todo-template__text");
+  textContainer.textContent = inputField;
 };
 
 // "To Do" Button Event Listener
