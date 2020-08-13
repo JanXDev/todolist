@@ -61,6 +61,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: width 0.5s;
+}
+
+.todo-template:hover {
+  width: 95%;
+  background: #e8ba46;
 }
 
 .todo-template__text {
