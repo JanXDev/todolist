@@ -1,4 +1,5 @@
 body {
+  font-family: sans-serif;
 }
 
 .todolist-container {
@@ -42,10 +43,10 @@ body {
 #date {
   color: white;
   position: absolute;
-  left: 10px;
-  bottom: 10px;
+  right: 10px;
+  top: 10px;
   font-family: monospace;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .todolist-container__display-task {
@@ -68,11 +69,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: width 0.3s;
+  transition: 0.3s;
 }
 
 .todo-template:hover {
-  width: 92%;
   background: #e8ba46;
 }
 
@@ -83,7 +83,7 @@ body {
 }
 
 .todo-template__text {
-  background: white;
+  color: #2a9d8f;
   border-radius: 0.3em;
   padding: 10px;
   margin-left: 2vw;
@@ -133,4 +133,10 @@ body {
   font-family: monospace;
   font-size: 1.5vw;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px) {
+  .todolist-container__edit-task p {
+    font-size: 2.5vw;
+  }
 }
