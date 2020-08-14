@@ -9,6 +9,8 @@ document.getElementsByClassName(
   "todolist-container__edit-task"
 )[0].style.display = "none";
 
+
+
 const addItem = () => {
   // Copy the Template
   let todoInput = document.getElementById("create-task__task-input").value;
@@ -59,6 +61,17 @@ const editItem = (toDoID) => {
     inputField.value = taskContent.textContent;
     console.log(taskContent);
     taskDiv.prepend(inputField);
+    console.log(inputField);
+
+    //Add in Button functionality
+    inputField.addEventListener("keypress", function(e) {
+      if (e.key === 'Enter') {
+        editItem(toDoID);
+      }
+    })
+
+    //Focus input field
+    inputField.focus();
   } else {
     buttonFunction.textContent = "Edit";
     taskContent.textContent = taskDiv.querySelectorAll("input")[0].value;
@@ -71,10 +84,15 @@ const deleteItem = (toDoID) => {
   document.querySelector("#todo" + toDoID).remove();
 };
 
-// "To Do" Button Event Listener
+// "To Do" Button Event Listener & "Enter" key Listener
 document
   .querySelector("#create-task__button-submit-input")
   .addEventListener("click", addItem);
+document.querySelector("#create-task__task-input").addEventListener("keypress", function(e) {
+  if (e.key === 'Enter') {
+    addItem();
+  }
+})
 
 // Date Display
 const dateElement = document.querySelector("#date");
