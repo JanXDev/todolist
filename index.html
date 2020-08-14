@@ -25,20 +25,27 @@
           <div class="todo-template__text">
             Here comes the text field with the task.
           </div>
-          <button type="button" class="button-todo-template__edit btn">Edit</button>
-          <button type="button" class="button-todo-template__delete">
-            Delete
-          </button>
+          <div class="buttons_template">
+            <button
+              type="button"
+              class="button-todo-template__edit"
+              id="button-todo-template__edit"
+            >
+              Edit
+            </button>
+            <button
+              type="button"
+              class="button-todo-template__delete"
+              id="button-todo-template__delete"
+            >
+              Delete
+            </button>
+          </div>
         </div>
       </div>
 
       <div class="todolist-container__edit-task">
-        <form id="edit-task__form-edit" onSubmit="return false;">
-          <input id="edit-task__task-edit" type="text" name="task-edit" />
-          <button type="button" id="edit-task__button-submit-edit">
-            Submit changes
-          </button>
-        </form>
+        <p>WBS CODING SCHOOL | made by Jan, Josh and Thomas</p>
       </div>
     </div>
     <script src="js/main.js"></script>

@@ -1,15 +1,16 @@
 body {
+  font-family: sans-serif;
 }
 
 .todolist-container {
-  max-width: 600px;
+  width: 100%;
   height: auto;
-  background: blue;
+  margin: 0;
 }
 
 .todolist-container__create-task {
   width: 100%;
-  height: 100px;
+  height: 200px;
   /*background: #00bcd4;*/
   background-image: url("https://cdn3.vectorstock.com/i/1000x1000/75/82/seamless-cartoon-nature-landscape-with-2d-game-vector-9827582.jpg");
   background-position: center;
@@ -27,18 +28,25 @@ body {
 }
 
 #create-task__task-input {
+  border: none;
 }
 
 #create-task__button-submit-input {
+  color: #2a9d8f;
+  background: #e9c46a;
+  border-radius: 5px;
+  border: none;
+  margin-left: 2vw;
+  padding: 1vw;
 }
 
 #date {
   color: white;
   position: absolute;
-  left: 10px;
-  bottom: 10px;
+  right: 10px;
+  top: 10px;
   font-family: monospace;
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 
 .todolist-container__display-task {
@@ -53,56 +61,84 @@ body {
 
 .todo-template {
   width: 90%;
-  min-height: 70px;
+  min-height: 60px;
   background: #e9c46a;
   margin: 5px;
   border-radius: 0.3em;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: width 0.5s;
+
+  justify-content: space-between;
+  transition: 0.3s;
 }
 
 .todo-template:hover {
-  width: 95%;
   background: #e8ba46;
 }
 
+.buttons_template {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2vw;
+
+}
+
 .todo-template__text {
-  background: white;
+  color: #2a9d8f;
   border-radius: 0.3em;
   padding: 10px;
+  margin-left: 2vw;
 }
 
 .todo-template__edit {
 }
 
 #button-todo-template__edit {
+  background: #264653;
+  color: #2a9d8f;
+  border-radius: 4px;
+  border: none;
+  margin-left: 5vw;
+  padding: 10px;
 }
 
 .todo-template_delete {
 }
 
 #button-todo-template__delete {
+  background: #264653;
+  color: #2a9d8f;
+  border-radius: 4px;
+  border: none;
+  margin-left: 1vw;
+  padding: 10px;
 }
 
 .todolist-container__edit-task {
   width: 100%;
   height: 100px;
-  background: #264653;
+  background: rgb(42, 157, 143);
+  background: linear-gradient(
+    180deg,
+    rgba(42, 157, 143, 1) 0%,
+    rgba(7, 46, 45, 1) 70%
+  );
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: flex-end;
 }
 
-#edit-task__form-edit {
-  display: flex;
+.todolist-container__edit-task p {
+  color: white;
+  font-family: monospace;
+  font-size: 1.5vw;
+  text-transform: uppercase;
 }
 
-#edit-task__task-edit {
-}
-
-#edit-task__button-submit-edit {
+@media only screen and (max-width: 600px) {
+  .todolist-container__edit-task p {
+    font-size: 2.5vw;
+  }
 }
