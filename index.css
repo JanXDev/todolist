@@ -25,10 +25,17 @@ body {
 
 #create-task__form-input {
   display: flex;
+  max-width: 800px;
+  width: 100%;
+  justify-content: center;
+  height: 40px;
 }
 
 #create-task__task-input {
   border: none;
+  border-radius: 4px;
+  width: 60%;
+
 }
 
 #create-task__button-submit-input {
@@ -38,6 +45,12 @@ body {
   border: none;
   margin-left: 2vw;
   padding: 1vw;
+  width: 20%;
+}
+
+#create-task__button-submit-input:hover {
+  background: #e8ba46;
+
 }
 
 #date {
@@ -51,9 +64,8 @@ body {
 
 .todolist-container__display-task {
   width: 100%;
-  min-height: 300px;
+  min-height: 500px;
   background: #2a9d8f;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,6 +73,7 @@ body {
 
 .todo-template {
   width: 90%;
+  max-width: 800px;
   min-height: 60px;
   background: #e9c46a;
   margin: 5px;
@@ -68,13 +81,25 @@ body {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
-
   justify-content: space-between;
   transition: 0.3s;
 }
 
 .todo-template:hover {
   background: #e8ba46;
+  width: 95%;
+  max-width: 850px;
+}
+
+.todo-template input{
+  width: 20%;
+  background-color: #e8ba46;
+  border: none;
+  color: #2a9d8f;
+  border-radius: 0.3em;
+  padding: 10px;
+  margin-left: 2vw;
+  outline: none;
 }
 
 .buttons_template {
